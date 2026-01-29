@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMIC MELODY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+  <div id="pauseMenu" class="pause-menu" style="display:none;">
+    <div class="pause-box">
+      <h2>Juego en pausa</h2>
+      <button id="resumeBtn">Reanudar el juego</button>
+      <button id="menuBtn">Volver al menú principal</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+
+    <div class="header">
+      <div class="score">0</div>
+      <h1 class="title">COSMIC MELODY</h1>
+      <p class="subtitle">Nova Composer</p>
+    </div>
+
+    <div class="lanes">
+      <div class="lane yellow">
+        <div class="key">A</div>
+      </div>
+      <div class="lane green">
+        <div class="key">S</div>
+      </div>
+      <div class="lane blue">
+        <div class="key">D</div>
+      </div>
+      <div class="lane red">
+        <div class="key">F</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

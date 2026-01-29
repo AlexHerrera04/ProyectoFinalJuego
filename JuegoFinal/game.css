@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: 'Tiny5', sans-serif;
+  background: url('assets/fondojuego.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.game-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.score {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin: 0;
+}
+
+.lanes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.lane {
+  position: relative;
+  flex: 1;
+  max-width: 100px;
+  height: 100%;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.key {
+  width: 80%;
+  padding: 12px 0;
+  font-size: 24px;
+  border-radius: 8px;
+  margin: 0 auto 10px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.yellow .key { background-color: #FFD54F; }
+.green  .key { background-color: #66BB6A; }
+.blue   .key { background-color: #42A5F5; }
+.red    .key { background-color: #EF5350; }
+
+.note {
+  width: 60%;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+.yellow .note { background-color: #F9D033; }
+.green  .note { background-color: #4CAF50; }
+.blue   .note { background-color: #1E88E5; }
+.red    .note { background-color: #E53935; }
+
+.lane .key.active {
+  transform: scale(1.3);
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.feedback {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-family: 'Tiny5', monospace;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.timeline {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 60%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.timeline-bar {
+  width: 100%;
+  height: 0%;
+  background: #00ffcc;
+  transition: height 0.1s linear;
+}
+
+.lane .key {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.1s ease;
+}
+
+.lane .key.active {
+  transform: scale(1.3);
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.start-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pause-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.pause-box {
+  background: #222;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.pause-box button 
+{ 
+  font-family: 'Tiny5', sans-serif; 
+  display: block;
+  width: 220px;
+  margin: 12px auto;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+.pause-box button:hover {
+  background: #00a0d1;
+}

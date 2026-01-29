@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tiny5", sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: url("assets/fondojuego.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.7);
+}
+
+
+.gameover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.gameover-title {
+  font-size: 64px;
+  color: #ff5f5f;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+
+.score-text {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.btn {
+  font-family: "Tiny5", sans-serif;
+  font-size: 22px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  color: black;
+}
+
+.retry-btn {
+  background-color: #00ff88;
+}
+
+.menu-btn {
+  background-color: #66ccff;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+}
